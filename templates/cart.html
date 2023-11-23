@@ -3,7 +3,7 @@
 
 {% block content %}
 {% load cart %}
-{% load custom_filter %}
+<!--{% load custom_filter %} -->
 <div class="container">
    <div class="border rounded p-4 m-4">
         <p class="display-4 pl-4 ml-4 btn btn-success rounded-pill">Your Cart</p>
@@ -20,15 +20,15 @@
                 </tr>
             </thead>
             <tbody>
-                
                 {% for product in products %}
                 <tr>
+                <!--
                     <td>{{forloop.counter}}</td>
-                   <!-- <td><img style="height: 80px;" class="rounded-circle" src="{{product.image.url}}" alt=""></td>
+                    <td><img style="height: 80px;" class="rounded-circle" src="{{product.image.url}}" alt=""></td>
                     <td>{{product.name}}</td>
                     <td>{{product.price|currency}}</td>
                     <td>{{product|cart_quantity:request.session.cart}}</td>
-                    <td>{{product|price_total:request.session.cart|currency}}</td>-->
+                    <td>{{product|price_total:request.session.cart|currency}}</td> -->
                 </tr>
 
                 {% endfor %}
@@ -74,7 +74,6 @@
                   
                 </div>
                 <div class="form-group">
-                    <!--       <label for="">Phone</label>-->
                     <input type="text" name="phone" id="" class="form-control" placeholder="" aria-describedby="helpId">
                   </div>
 
