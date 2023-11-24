@@ -2,6 +2,8 @@
 
 Team 3 made this webshop website for Lexicon program System Developer Python Security.
 
+Visit the pages **[site](https://Unnatithaker96.github.io/Django-project/)** hosted here on github! 
+
 ### Requirements
 
 - asgiref==3.7.2
@@ -12,8 +14,9 @@ Team 3 made this webshop website for Lexicon program System Developer Python Sec
 - six==1.16.0
 
 Use conda to install the requirements.txt with: 
-`conda install --file requirements.txt`
+
+```conda install --file requirements.txt```
 
 Otherwise use:
 
-`pip install -r requirements.txt`
+```pip install -r requirements.txt```
