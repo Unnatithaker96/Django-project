@@ -2,7 +2,7 @@ from django.db import models
 import datetime
 
 class Order(models.Model):
-    product = models.ForeignKey(Products, on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     quantity = models.IntegerField(default=1)
     price = models.IntegerField(default=1)
@@ -13,9 +13,13 @@ class Order(models.Model):
         self.save()
 
     @staticmethod
-    def get_order_by_customer(customer_id):
-        return Order.objects.filter(customer=customer_id).order_by('-date')
+    def get_order_by_user(user_id):
+        return Order.objects.filter(user=user_id).order_by('-date')
+
+    def __str__(self):
+        return f"Order: {self.quantity} {self.product}, by {self.user}, price {self.price}, at {self.date}, status: {self.status}"
     
     class Meta:
-
+        verbose_name = 'order'
+        verbose_name_plural = 'orders'
         

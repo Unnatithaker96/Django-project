@@ -4,7 +4,7 @@ from django.shortcuts import render, redirect
 from store.models.customer import User
 from django.views import View
 
-from store.models.product import Products
+from store.models.product import Product
 from store.models.orders import Order
 
 class Checkout(View):
@@ -12,7 +12,7 @@ class Checkout(View):
         address = request.POST.get('address')
         user = request.session.get('user')
         cart = request.session.get('cart')
-        products = Products.get_products_by_id(list(cart.keys()))
+        products = Product.get_products_by_id(list(cart.keys()))
         print(address, user, cart, products)
 
         for product in products:
