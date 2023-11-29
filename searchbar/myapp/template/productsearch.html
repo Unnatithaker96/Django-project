@@ -1,0 +1,13 @@
+<!-- templates/shop/productsearch.html -->
+{% "base.html" %}
+<h1>Search Results</h1>
+
+{% if results %}
+    <ul>
+        {% for product in results %}
+            <li>{{ product.name }} - {{ product.price }}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No results found.</p>
+{% endif %}
