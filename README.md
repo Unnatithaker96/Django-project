@@ -2,7 +2,7 @@
 
 Team 3 made this webshop website for Lexicon program System Developer Python Security.
 
-Visit the pages **[site](https://Unnatithaker96.github.io/Django-project/)** hosted here on github! 
+<!-- Visit the pages **[site](https://Unnatithaker96.github.io/Django-project/)** hosted here on github! -->
 
 ### Requirements
 

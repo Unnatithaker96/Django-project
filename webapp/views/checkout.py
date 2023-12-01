@@ -7,7 +7,7 @@ from django.views import View
 from webapp.models.product import Product
 from webbapp.models.orders import Order
 
-class Checkout(View):
+class CheckOut(View):
     def post(self, request):
         address = request.POST.get('address')
         user = request.session.get('user')
