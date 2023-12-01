@@ -6,7 +6,7 @@ from .views.checkout import CheckOut
 from .views.order import OrderView
 from .views.product_info import product_info
 
-from .middlewares.auth import  auth_middleware
+from .middlewares.auth import auth_middleware
 
 
 urlpatterns = [
