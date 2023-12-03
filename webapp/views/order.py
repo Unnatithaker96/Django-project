@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 #from django.contrib.auth.hashers import check_password
-from webapp.models.customer import User
+from webapp.models.user import CustomUser
 from django.views import View
 from webapp.models.product import Products
 from webapp.models.orders import Order

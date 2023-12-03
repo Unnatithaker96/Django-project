@@ -1,9 +1,11 @@
 from django.db import models
 import datetime
+from .product import Product
+from .user import CustomUser
 
 class Order(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
     quantity = models.IntegerField(default=1)
     price = models.IntegerField(default=1)
     date = models.DateField(default=datetime.datetime.today)

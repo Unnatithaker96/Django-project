@@ -10,7 +10,6 @@ class Category(models.Model):
     slug = models.SlugField(max_length=250, unique=True)
     #Slug field used to maintain unique page for each category
     
-    
     class Meta:
         
         verbose_name_plural = 'categories'
@@ -21,5 +20,4 @@ class Category(models.Model):
     
         #function to create our own url reverse
     def get_absolute_url(self):
-        
        return  reverse('list-category', args=[self.slug])

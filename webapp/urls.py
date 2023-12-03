@@ -1,11 +1,5 @@
 from django.urls import path
-from .views.store import store
-from .views.cart import Cart
-from .views.categories import categories, list_category
-from .views.checkout import CheckOut
-from .views.order import OrderView
-from .views.product_info import product_info
-
+from .views import Cart, CheckOut, product_info, list_category, OrderView, store
 from .middlewares.auth import auth_middleware
 
 
